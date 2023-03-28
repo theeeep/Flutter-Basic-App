@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -12,8 +14,9 @@ class DashBoard extends StatelessWidget {
         title: Text('Basic App'),
         backgroundColor: Colors.blueGrey,
       ),
-      body: Center(
-        child: Text("Random Value is: ${getNumber()}"),
+      body: Image(
+        image: AssetImage(
+            "assets/images/2002.i515.001_modern_students_flat_icons-13.jpg"),
       ),
     );
   }
