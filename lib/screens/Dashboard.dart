@@ -14,14 +14,17 @@ class DashBoard extends StatelessWidget {
         title: Text('Basic App'),
         backgroundColor: Colors.blueGrey,
       ),
-      body: Image(
-        image: AssetImage(
-            "assets/images/2002.i515.001_modern_students_flat_icons-13.jpg"),
+      body: Center(
+        child: IconButton(
+          icon: Icon(
+            Icons.alt_route_rounded,
+          ),
+          onPressed: () {},
+          iconSize: 100,
+          color: Colors.lightGreen,
+          splashColor: Colors.deepOrange,
+        ),
       ),
     );
   }
-}
-
-int getNumber() {
-  return Random().nextInt(100);
 }
