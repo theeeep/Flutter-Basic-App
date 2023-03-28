@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DashBoard extends StatelessWidget {
   const DashBoard({super.key});
@@ -16,9 +14,8 @@ class DashBoard extends StatelessWidget {
       ),
       body: Center(
         child: IconButton(
-          icon: Icon(
-            Icons.alt_route_rounded,
-          ),
+          // ignore: deprecated_member_use
+          icon: Icon(FontAwesomeIcons.airbnb),
           onPressed: () {},
           iconSize: 100,
           color: Colors.lightGreen,
