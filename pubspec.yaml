@@ -54,6 +54,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/2002.i515.001_modern_students_flat_icons-13.jpg
+    - assets/images/ani.jpg
   #   - images/a_dot_ham.jpeg
 
   # fonts:
