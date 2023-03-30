@@ -2,6 +2,7 @@
 
 // import 'screens/Home.dart';
 import 'package:basic_app/screens/RowCol.dart';
+import 'screens/ListView.dart';
 
 // import 'screens/Appbar.dart';
 
@@ -19,6 +20,6 @@ class MyApp extends StatelessWidget {
         title: "My FLutter App",
         themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
-        home: RowCol());
+        home: ListVieww());
   }
 }
