@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
 
 class ListVieww extends StatelessWidget {
-  const ListVieww({Key? key}) : super(key: key);
+  ListVieww({Key? key}) : super(key: key);
+
+  List<String> products = ["Bed", "Sofa", "Chair"];
+  List<String> productsDetails = [
+    "King Size Bed",
+    "King Size Sofa",
+    "Wooden Sofa"
+  ];
+  List<int> price = [3000, 2500, 1860];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: ListView(
-          children: [
-            ListTile(
+        child: ListView.builder(
+          itemCount: products.length,
+          itemBuilder: (context, index) {
+            return ListTile(
               leading: CircleAvatar(
-                child: Icon(Icons.alarm_on_sharp),
-                backgroundColor: Colors.brown.shade200,
+                child: Text(products[index][0]),
               ),
-              title: Text("Alarm"),
-              subtitle: Text("Set"),
-              trailing: Text("4:40 AM"),
-              onTap: () {},
-              tileColor: Colors.brown.shade100,
-            ),
-          ],
+              title: Text(products[index]),
+              subtitle: Text(productsDetails[index]),
+              trailing: Text(price[index].toString()),
+            );
+          },
         ),
       ),
     );
