@@ -1,28 +1,48 @@
-// ignore_for_file: prefer_const_constructors
-
-// import 'screens/Home.dart';
-import 'package:basic_app/screens/RowCol.dart';
-import 'package:basic_app/screens/FloatActnBtn.dart';
-import 'package:basic_app/screens/Stack.dart';
-import 'package:basic_app/screens/CustomWidg.dart';
-import 'screens/ListView.dart';
-
-// import 'screens/Appbar.dart';
-
-// import 'screens/Dashboard.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(CTStatelessClass());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CTStatelessClass extends StatelessWidget {
+  const CTStatelessClass({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "My FLutter App",
-        themeMode: ThemeMode.system,
-        debugShowCheckedModeBanner: false,
-        home: CustWidgt());
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Stateful Widget Flutter - 3.1"),
+          centerTitle: true,
+        ),
+        body: CTStatefullClass(),
+      ),
+    );
+  }
+}
+
+class CTStatefullClass extends StatefulWidget {
+  const CTStatefullClass({super.key});
+
+  @override
+  State<CTStatefullClass> createState() => _CTStatefullClassState();
+}
+
+class _CTStatefullClassState extends State<CTStatefullClass> {
+  bool liked = false;
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        ListTile(
+          title: Text("Nike Shoes"),
+          trailing: IconButton(
+            icon:
+                liked ? (Icon(Icons.favorite)) : (Icon(Icons.favorite_border)),
+            onPressed: () {
+              setState(() => liked = !liked);
+            },
+          ),
+        ),
+      ],
+    );
   }
 }
